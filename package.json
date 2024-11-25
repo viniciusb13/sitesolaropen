@@ -1,0 +1,35 @@
+{
+  "name": "teste",
+  "version": "1.0.0",
+  "description": "Sistema de monitoramento dos devices ESP",
+  "main": "server.js",
+  "scripts": {
+    "backend": "nodemon server.js",
+    "frontend": "npm start --prefix frontend",
+    "device": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "start": "node server.js",
+    "heroku-postbuild": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@userfront/react": "^0.2.22",
+    "body-parser": "^1.20.0",
+    "concurrently": "^7.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "googleapis": "^100.0.0",
+    "mongoose": "^6.3.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.7.5",
+    "slug": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
